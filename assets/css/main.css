@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5vh 90vh 5vh;
+    grid-template-areas: "header" "main" "footer";
+}
+
+header {
+    grid-area: header;
+    background-color: #333;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". form .";
+    align-items: center;
+    padding: 1rem;
+}
+
+header form {
+    grid-area: form;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header form select,
+header form select option {
+    padding: 0.5rem;
+}
+
+main {
+    grid-area: main;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". section .";
+    align-items: center;
+    justify-content: center;
+}
+
+main section {
+    grid-area: section;
+    padding: 1rem;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 99999px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main section h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
