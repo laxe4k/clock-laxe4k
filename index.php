@@ -1,12 +1,22 @@
 <?php require_once 'assets/php/timezone.php'; ?>
 <!DOCTYPE html>
-<html lang="<?php echo substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2); ?>">
+<html lang="<?php if (substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2) ?? 'en' === 'fr') {
+                echo 'fr';
+            } else {
+                echo 'en';
+            } ?>">
 <base href="/">
 <?php require_once 'assets/php/head.php'; ?>
+
 <body>
     <header class="timezone">
         <form action="" method="get">
-            <select name="timezone" id="timezone" onchange="this.form.submit()">
+            <select name="timezone" id="timezone" onchange="this.form.submit()" title="
+            <?php if (substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2) ?? 'en' === 'fr') {
+                echo 'Fuseau horaire';
+            } else {
+                echo 'Timezone';
+            } ?>">
                 <?php echo $options; ?>
             </select>
         </form>
@@ -18,4 +28,5 @@
     </main>
     <?php require_once 'assets/php/footer.php'; ?>
 </body>
+
 </html>
