@@ -211,13 +211,38 @@ footer p {
   }
 }
 
+/* Responsive Design pour les téléphones */
 @media (max-width: 480px) {
+  /* Ajuster la taille de la section heure */
   .heure {
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
+    padding: 0.5rem 1rem; /* Réduire les marges internes */
+    font-size: 1.5rem; /* Réduire la taille de la police */
+    border-radius: 10px; /* Réduire les coins arrondis */
   }
 
   .heure h1 {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Réduire la taille du texte */
+  }
+
+  /* Ajuster l'horloge */
+  #clock span {
+    font-size: 3rem; /* Réduire la taille des chiffres */
+  }
+
+  .sep {
+    font-size: 3rem; /* Réduire la taille des séparateurs */
+    margin: 0 5px; /* Réduire l'espace autour des séparateurs */
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.7rem; /* Réduire la taille du texte */
+    padding: 0.5rem; /* Réduire les marges internes */
+  }
+
+  /* Header */
+  header {
+    font-size: 1rem; /* Réduire la taille du texte */
+    padding: 0.5rem; /* Réduire les marges internes */
   }
 }

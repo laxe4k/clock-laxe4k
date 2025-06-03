@@ -10,4 +10,5 @@
     <?php endif; ?>
 </footer>
 
+<script src="assets/js/toggle-display.js"></script>
 <script src="assets/js/update-time.js"></script>
