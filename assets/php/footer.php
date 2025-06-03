@@ -1,14 +1,12 @@
 <footer>
     <?php
-    // On récupère les deux premières lettres de la langue du navigateur, ou 'en' par défaut si non défini
+    // Détection de la langue du navigateur avec fallback sur 'en'
     $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? 'en', 0, 2);
-
-    if ($lang === 'fr') : ?>
-        <p>© 2022 - <?= date('Y'); ?> Laxe4k - Tous droits réservés</p>
-    <?php else : ?>
-        <p>© 2022 - <?= date('Y'); ?> Laxe4k - All rights reserved</p>
-    <?php endif; ?>
+    $isFrench = $lang === 'fr';
+    ?>
+    <p>© 2022 - <?= date('Y'); ?> Laxe4k - <?= $isFrench ? 'Tous droits réservés' : 'All rights reserved'; ?></p>
 </footer>
 
-<script src="assets/js/toggle-display.js"></script>
-<script src="assets/js/update-time.js"></script>
+<!-- Chargement des scripts -->
+<script src="assets/js/toggle-display.js" defer></script>
+<script src="assets/js/update-time.js" defer></script>

@@ -6,7 +6,7 @@ $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? 'en', 0, 2);
 $lang = in_array($lang, ['fr', 'en']) ? $lang : 'en';
 ?>
 <!DOCTYPE html>
-<html lang="<?= $lang ?>">
+<html lang="<?= htmlspecialchars($lang) ?>">
 <base href="/" />
 <?php require_once 'assets/php/head.php'; ?>
 
