@@ -21,7 +21,7 @@ $lang = in_array($lang, ['fr', 'en']) ? $lang : 'en';
 
     <main>
         <section class="heure">
-            <div id="clock0_bg" onclick="clockclick(event)">
+            <div id="clock0_bg"></div>
                 <time id="clock">
                     <div class="group">
                         <span id="bcdigit1" class="digit1">0</span>

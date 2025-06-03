@@ -15,16 +15,24 @@ if (isset($_GET['timezone']) && in_array($_GET['timezone'], timezone_identifiers
     }
 }
 
-if (isset($_GET['format'])) {
-    if ($_GET['format'] === 'json') {
-        header('Content-Type: application/json');
-        echo json_encode(['timezone' => $timezone]);
-        exit;
-    } elseif ($_GET['format'] === 'txt') {
-        header('Content-Type: text/plain');
-        echo $timezone;
-        exit;
-    }
+// Format TXT → juste renvoyer la timezone
+if (isset($_GET['format']) && $_GET['format'] === 'txt') {
+    header('Content-Type: text/plain');
+    echo $timezone;
+    exit;
+}
+
+// Format JSON → inclure aussi la date UTC
+if (isset($_GET['format']) && $_GET['format'] === 'json') {
+    header('Content-Type: application/json');
+
+    $serverTime = (new DateTime('now', new DateTimeZone('UTC')))->format('c'); // ISO 8601 UTC
+
+    echo json_encode([
+        'serverTime' => $serverTime,
+        'timezone' => $timezone
+    ]);
+    exit;
 }
 
 $timezones = array();
