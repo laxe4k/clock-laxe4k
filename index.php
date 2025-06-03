@@ -21,9 +21,24 @@ $lang = in_array($lang, ['fr', 'en']) ? $lang : 'en';
 
     <main>
         <section class="heure">
-            <h1>
-                <span id="heure"><?= $date->format('H') ?></span>:<span id="minute"><?= $date->format('i') ?></span>:<span id="seconde"><?= $date->format('s') ?></span>
-            </h1>
+            <div id="clock0_bg" onclick="clockclick(event)">
+                <time id="clock">
+                    <div class="group">
+                        <span id="bcdigit1" class="digit1">0</span>
+                        <span id="bcdigit2" class="digit2">0</span>
+                    </div>
+                    <span class="sep">:</span>
+                    <div class="group">
+                        <span id="bcdigit3" class="digit3">0</span>
+                        <span id="bcdigit4" class="digit4">0</span>
+                    </div>
+                    <span class="sep">:</span>
+                    <div class="group">
+                        <span id="bcdigit5" class="digit5">0</span>
+                        <span id="bcdigit6" class="digit6">0</span>
+                    </div>
+                </time>
+            </div>
         </section>
     </main>
 

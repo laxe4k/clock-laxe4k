@@ -14,6 +14,19 @@ if (isset($_GET['timezone']) && in_array($_GET['timezone'], timezone_identifiers
         $timezone = 'UTC';
     }
 }
+
+if (isset($_GET['format'])) {
+    if ($_GET['format'] === 'json') {
+        header('Content-Type: application/json');
+        echo json_encode(['timezone' => $timezone]);
+        exit;
+    } elseif ($_GET['format'] === 'txt') {
+        header('Content-Type: text/plain');
+        echo $timezone;
+        exit;
+    }
+}
+
 $timezones = array();
 // Parcourt toutes les timezones et calcule leur décalage par rapport à GMT
 foreach (timezone_identifiers_list() as $timezone_identifier) {

@@ -140,6 +140,44 @@ main {
   font-weight: bold;
 }
 
+#clock0_bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Assure que le conteneur occupe tout l'espace disponible */
+    width: 100%; /* Assure que le conteneur occupe toute la largeur */
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+#clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; /* Empêche les éléments de passer à la ligne */
+    text-align: center; /* Centre le texte horizontalement */
+    height: 100%; /* Assure que l'horloge occupe tout l'espace vertical */
+}
+
+.group {
+    display: flex;
+    gap: 0; /* Supprime l'espace entre les chiffres dans un groupe */
+}
+
+#clock span {
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 6rem; /* Ajustez la taille si nécessaire */
+    color: var(--text-color);
+    margin: 0; /* Supprime les marges entre les chiffres */
+}
+
+.sep {
+    font-size: 6rem; /* Ajustez la taille pour correspondre aux chiffres */
+    color: var(--accent-color);
+    margin: 0 10px; /* Ajoute un petit espace autour des séparateurs */
+}
+
 /* Footer */
 footer {
   background-color: var(--primary-color);
