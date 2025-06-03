@@ -96,7 +96,7 @@ function updateTime() {
 
     const title = document.querySelector('title');
     if (title) {
-        title.textContent = `${title.textContent.split('|')[0].trim()} | ${heure}:${minute}:${seconde}`;
+        title.textContent = `${title.textContent.split('|')[0].trim()} | ${heure}:${minute}`;
     }
 }
 
