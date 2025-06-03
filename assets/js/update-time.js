@@ -131,7 +131,11 @@ function updateTime() {
 
     const title = document.querySelector('title');
     if (title) {
-        title.textContent = `${title.textContent.split('|')[0].trim()} | ${heure}:${minute}`;
+        // Met à jour le titre seulement quand les minutes changent
+        if (!title.dataset.prevMinute || title.dataset.prevMinute !== minute) {
+            title.textContent = `${title.textContent.split('|')[0].trim()} | ${heure}:${minute}`;
+            title.dataset.prevMinute = minute;
+        }
     }
 }
 
