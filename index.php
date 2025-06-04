@@ -40,6 +40,15 @@ $lang = in_array($lang, ['fr', 'en']) ? $lang : 'en';
                 </time>
             </div>
         </section>
+
+        <section class="countdown">
+            <h2><?= $lang === 'fr' ? 'Compte à rebours' : 'Countdown' ?></h2>
+            <form id="countdown-form">
+                <input type="number" id="countdown-minutes" min="1" placeholder="<?= $lang === 'fr' ? 'Minutes' : 'Minutes' ?>">
+                <button type="submit"><?= $lang === 'fr' ? 'Démarrer' : 'Start' ?></button>
+            </form>
+            <div id="countdown-display">00:00:00</div>
+        </section>
     </main>
 
     <?php require_once 'assets/php/footer.php'; ?>

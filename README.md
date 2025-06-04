@@ -4,14 +4,20 @@
 
 ## Description
 
-**Laxe4k - Clock** est un site web qui vous permet de voir l'heure en temps réel en fonction de votre fuseau horaire. Il propose également un compte à rebours configurable.
+**Laxe4k - Clock** est un site web qui vous permet de voir l'heure en temps réel en fonction de votre fuseau horaire. Il propose également un compte à rebours configurable pour ne rien manquer de vos évènements.
 
 ## Fonctionnalités
 
 - Affichage de l'heure en temps réel selon le fuseau horaire sélectionné.
 - Changement de fuseau horaire via un menu déroulant.
 - Affichage en plein écran en cliquant sur l'heure.
-- Compte à rebours configurable.
+- Compte à rebours configurable grâce à un simple formulaire.
+
+## Utilisation
+
+- **Choix du fuseau horaire :** sélectionnez votre zone dans le menu déroulant situé en haut de la page.
+- **Plein écran :** cliquez sur l'heure pour afficher l'horloge sans l'en-tête ni le pied de page.
+- **Compte à rebours :** indiquez le nombre de minutes souhaité puis lancez le minuteur.
 
 ## Technologies utilisées
 

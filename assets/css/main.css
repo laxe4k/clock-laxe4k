@@ -178,6 +178,29 @@ main {
     margin: 0 10px; /* Ajoute un petit espace autour des séparateurs */
 }
 
+/* Countdown Section */
+.countdown {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#countdown-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#countdown-minutes {
+  width: 5rem;
+  padding: 0.5rem;
+}
+
+#countdown-display {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 /* Footer */
 footer {
   background-color: var(--primary-color);
@@ -206,6 +229,10 @@ footer p {
     font-size: 2rem;
   }
 
+  #countdown-display {
+    font-size: 1.5rem;
+  }
+
   .heure h1 {
     font-size: 4rem;
   }
@@ -232,6 +259,15 @@ footer p {
   .sep {
     font-size: 3rem; /* Réduire la taille des séparateurs */
     margin: 0 5px; /* Réduire l'espace autour des séparateurs */
+  }
+
+  #countdown-minutes {
+    width: 4rem;
+    padding: 0.25rem;
+  }
+
+  #countdown-display {
+    font-size: 1.2rem;
   }
 
   /* Footer */

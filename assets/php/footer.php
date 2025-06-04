@@ -10,3 +10,4 @@
 <!-- Chargement des scripts -->
 <script src="assets/js/toggle-display.js" defer></script>
 <script src="assets/js/update-time.js" defer></script>
+<script src="assets/js/countdown.js" defer></script>
